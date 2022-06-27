@@ -1,0 +1,151 @@
+version: "3.1"
+
+stories:
+
+# - story:  story 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: info_form
+#   - active_loop: info_form
+#   - action: utter_ask_parentname
+#   - intent: get_parent_name
+#   - slot_was_set:
+#     - requested_slot: parent_name
+#   - slot_was_set:
+#     - parent_name : Mahesh Sharma
+#   - action: utter_ask_studentname
+#   - intent: get_student_name
+#   - slot_was_set:
+#     - requested_slot: student_name
+#   - slot_was_set:
+#     - student_name : Rajesh Sharma
+#   - action: utter_ask_studentclass
+#   - intent: get_student_class  
+#   - slot_was_set:
+#     - requested_slot: student_class
+#   - slot_was_set:
+#     - student_class: class 10 
+#   - action: utter_ask_studentroll
+#   - intent: get_student_roll
+#   - slot_was_set:
+#     - requested_slot: student_roll
+#   - slot_was_set:
+#     - student_roll: 69
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: utter_info_recorded
+#   - action: utter_select_service
+
+
+- story: give curriculum
+  steps:
+  - intent: get_curriculum
+  - action: utter_ask_get_curriculum
+  - action: utter_post_service
+  
+- story: give exam
+  steps:
+  - intent: get_exam
+  - action: utter_ask_get_exam
+  - action: utter_post_service
+
+- story: give attendance
+  steps:
+  - intent: get_attendance
+  - action: utter_ask_get_attendance
+  - action: utter_post_service
+
+ 
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: info_form
+  - active_loop: info_form
+  - slot_was_set:
+    - requested_slot: parent_name
+  - slot_was_set:
+    - parent_name: suresh singh
+  - slot_was_set:
+    - requested_slot: student_name
+  - slot_was_set:
+    - student_name: yash singh
+  - slot_was_set:
+    - requested_slot: student_class
+  - slot_was_set:
+    - student_class: class 10
+  - slot_was_set:
+    - requested_slot: student_roll
+  - slot_was_set:
+    - student_roll: '69'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_return_info
+  - action: utter_info_recorded
+  - action: utter_select_service
+  - intent: get_curriculum
+  - action: utter_ask_get_curriculum
+
+
+- story: loop services//affirm
+  steps:
+  - action: utter_post_services
+  - intent: affirm
+  - action: utter_select_service
+
+- story: deny post service
+  steps:
+  - action: utter_post_services
+  - intent: deny
+  - action: action_reset_slots
+  - action: utter_goodbye
+  - action: action_restart
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: info_form
+  - active_loop: info_form
+  - slot_was_set:
+    - requested_slot: parent_name
+  - slot_was_set:
+    - parent_name: avinash singh
+  - slot_was_set:
+    - requested_slot: student_name
+  - slot_was_set:
+    - student_name: nand singh
+  - slot_was_set:
+    - requested_slot: student_class
+  - slot_was_set:
+    - student_class: class 5
+  - slot_was_set:
+    - requested_slot: student_roll
+  - slot_was_set:
+    - student_roll: '99'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_return_info
+  - action: utter_info_recorded
+  - action: utter_select_service
+  - intent: get_curriculum
+  - action: utter_ask_get_curriculum
+  - action: utter_post_service
+  - intent: affirm
+  - action: utter_select_service
+  - intent: get_exam
+  - action: utter_ask_get_exam
+  - action: utter_post_service
+  - intent: affirm
+  - action: utter_select_service
+  - intent: get_attendance
+  - action: utter_ask_get_attendance
+  - action: utter_post_service
+  - intent: deny
+  - action: action_reset_slots
+  - action: utter_goodbye
+  - action: action_restart

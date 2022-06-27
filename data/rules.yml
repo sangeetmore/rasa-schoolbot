@@ -1,0 +1,52 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+##info collection###
+- rule: info form activate
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: info_form
+  - active_loop: info_form
+
+- rule: info form end
+  condition: 
+    - active_loop : info_form
+  steps:
+  - action: user_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_info_recorded
+  - action: action_return_info
+  - action: utter_select_service
+ 
+
+
+
+##--------------------------------------------##
+
+- rule: loop services//affirm
+  steps:
+  - action: utter_post_services
+  - intent: affirm
+  - action: utter_select_service
+
+- rule: deny post service
+  steps:
+  - action: utter_post_services
+  - intent: deny
+  - action: action_reset_slots
+  - action: utter_goodbye
+  - action: action_restart

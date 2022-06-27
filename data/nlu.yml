@@ -1,0 +1,112 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: get_curriculum
+  examples: |
+    - I want the curriculum
+    - get me curriculum of my child
+    - show me curriculum
+    - i want to see the curriculum of the class my child is in
+- intent: get_exam
+  examples: |
+    - I want details regarding the exam
+    - i want examination details
+    - get me exam details
+    - i want to see my chil's exam details
+- intent: get_attendance
+  examples: |
+    - I want attendance of my pupil
+    - get me attendance
+    - show me attendance
+    - i want details regarding my child's attendance
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: get_student_class
+  examples: |
+    - [class 3](studentclass)
+    - [class 4](studentclass)
+    - [class 10](studentclass)
+    - [class 1](studentclass)
+    - [class 5](studentclass)
+    - [class 5](studentclass)
+- intent: get_student_roll
+  examples: |
+    - [1002](studentroll)
+    - [2001](studentroll)
+    - [39](studentroll)
+    - [69](studentroll)
+    - [420](studentroll)
+    - [99](studentroll)
+- intent: get_student_name
+  examples: |
+    - [Rajat Sharma](studentname)
+    - [rajesh meneges](studentname)
+    - [suyash patil](studentname)
+    - [amisha singh](studentclass)
+    - [sangeet more](studentclass)
+    - [arushi koul](studentname)
+    - [tanmay saini](studentname)
+    - [yash singh](studentname)
+    - [nand shukla](studentname)
+    - [nand singh](studentname)
+- intent: get_parent_name
+  examples: |
+    - [Mahesh Sharma](parentname)
+    - [Monica Meneges](parentname)
+    - [bhupesh patil](parentname)
+    - [rajesh singh](parentname)
+    - [sudhir more](parentname)
+    - [goldie koul](parentname)
+    - [alka saini](parentname)
+    - [avinash shukla](parentname)
+    - [ramesh kumar](parentname)
+    - [suresh kumar](parentname)
+    - [suresh singh](parentname)
+    - [avinash singh](parentname)
