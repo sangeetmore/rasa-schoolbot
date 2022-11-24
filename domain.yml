@@ -13,10 +13,9 @@ intents:
 - goodbye
 - greet
 entities:
-- parentname
+- name
 - studentclass
 - studentroll
-- studentname
 responses:
   utter_greet:
   - text: Hey! I am the bot for the school, here to help you the best way I can. Firstly, i need some info
@@ -61,12 +60,12 @@ slots:
     type: text
     mappings:
     - type: from_entity
-      entity: parentname
+      entity: name
   student_name:
     type: text
     mappings:
     - type: from_entity
-      entity: studentname
+      entity: name
   student_class:
     type: any
     mappings:
