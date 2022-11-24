@@ -1,5 +1,8 @@
 version: "3.1"
 nlu:
+- regex: name
+  examples: |
+    - /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u
 - intent: greet
   examples: |
     - hey
@@ -86,27 +89,27 @@ nlu:
     - [99](studentroll)
 - intent: get_student_name
   examples: |
-    - [Rajat Sharma](studentname)
-    - [rajesh meneges](studentname)
-    - [suyash patil](studentname)
-    - [amisha singh](studentclass)
-    - [sangeet more](studentclass)
-    - [arushi koul](studentname)
-    - [tanmay saini](studentname)
-    - [yash singh](studentname)
-    - [nand shukla](studentname)
-    - [nand singh](studentname)
+    - [Rajat Sharma](name)
+    - [rajesh meneges](name)
+    - [suyash patil](name)
+    - [amisha singh](name)
+    - [sangeet more](name)
+    - [arushi koul](name)
+    - [tanmay saini](name)
+    - [yash singh](name)
+    - [nand shukla](name)
+    - [nand singh](name)
 - intent: get_parent_name
   examples: |
-    - [Mahesh Sharma](parentname)
-    - [Monica Meneges](parentname)
-    - [bhupesh patil](parentname)
-    - [rajesh singh](parentname)
-    - [sudhir more](parentname)
-    - [goldie koul](parentname)
-    - [alka saini](parentname)
-    - [avinash shukla](parentname)
-    - [ramesh kumar](parentname)
-    - [suresh kumar](parentname)
-    - [suresh singh](parentname)
-    - [avinash singh](parentname)
+    - [Mahesh Sharma](name)
+    - [Monica Meneges](name)
+    - [bhupesh patil](name)
+    - [rajesh singh](name)
+    - [sudhir more](name)
+    - [goldie koul](name)
+    - [alka saini](name)
+    - [avinash shukla](name)
+    - [ramesh kumar](name)
+    - [suresh kumar](name)
+    - [suresh singh](name)
+    - [avinash singh](name)
