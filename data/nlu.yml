@@ -79,6 +79,11 @@ nlu:
     - [class 1](studentclass)
     - [class 5](studentclass)
     - [class 5](studentclass)
+    - [4th class](studentclass)
+    - [12 class](studentclass)
+    - [1 class](studentclass)
+    - [8th class](studentclass)
+    - [class 10th](studentclass)
 - intent: get_student_roll
   examples: |
     - [1002](studentroll)
